@@ -1,6 +1,6 @@
 import Victor from 'victor';
-import { Blueprint } from './index';
-import { DEFAULT_ENTITIES as entityData } from './default_entities';
+import { Blueprint } from './blueprint';
+import { defaultEntities as entityData } from './default_entities';
 
 type PositionGrid = { [location: string]: Entity };
 type Side = 1 | 2 | 'in' | 'out';

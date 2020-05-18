@@ -22,7 +22,7 @@ export interface EntityDescription {
   recipe?: boolean;
 }
 
-export const DEFAULT_ENTITIES: { [entity_name: string]: EntityDescription } = {
+export const defaultEntities: { [entity_name: string]: EntityDescription } = {
   // ADD MORE (vanilla) AS YOU PLEASE (or modded if it's just for you)!
   // Somebody will probably automate the gathering of this data soon...
 
