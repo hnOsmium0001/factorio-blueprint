@@ -1,6 +1,6 @@
 import Victor from 'victor';
-import Blueprint from './index';
-import entityData from './defaultentities';
+import { Blueprint } from './index';
+import { DEFAULT_ENTITIES as entityData } from './default_entities';
 
 type PositionGrid = { [location: string]: Entity };
 type Side = 1 | 2 | 'in' | 'out';
@@ -39,7 +39,7 @@ interface AlertParameters {
   message?: string;
 }
 
-export default class Entity {
+export class Entity {
   id: number;
   bp: Blueprint;
   name: string;

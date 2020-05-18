@@ -1,10 +1,4 @@
-const fluid = 'fluid';
-const item = 'item';
-const virtual = 'virtual';
-const tile = 'tile';
-const recipe = 'recipe';
-
-enum Type {
+export enum Type {
   Fluid = 'fluid',
   Item = 'item',
   Virtual = 'virtual',
@@ -12,7 +6,7 @@ enum Type {
   Recipe = 'recipe',
 }
 
-interface EntityDescription {
+export interface EntityDescription {
   type?: string;
   width?: number;
   height?: number;
@@ -28,7 +22,7 @@ interface EntityDescription {
   recipe?: boolean;
 }
 
-const DEFAULT_ENTITIES: { [entity_name: string]: EntityDescription } = {
+export const DEFAULT_ENTITIES: { [entity_name: string]: EntityDescription } = {
   // ADD MORE (vanilla) AS YOU PLEASE (or modded if it's just for you)!
   // Somebody will probably automate the gathering of this data soon...
 
@@ -1062,5 +1056,3 @@ const DEFAULT_ENTITIES: { [entity_name: string]: EntityDescription } = {
     type: Type.Virtual,
   },
 };
-
-export default DEFAULT_ENTITIES;

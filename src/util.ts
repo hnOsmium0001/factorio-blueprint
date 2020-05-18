@@ -2,10 +2,10 @@
  * Created by anth on 21.05.2017.
  */
 
-import { Buffer } from 'buffer';
 import * as zlib from 'zlib';
+import { Buffer } from 'buffer';
 
-const toExport = {
+export const util = {
   /**
    * Parse blueprint string in .15 format
    * @param str blueprint string to parse
@@ -44,7 +44,5 @@ const toExport = {
   },
 };
 
-toExport.decode.latest = toExport.decode[0];
-toExport.encode.latest = toExport.encode[0];
-
-export default toExport;
+util.decode.latest = util.decode[0];
+util.encode.latest = util.encode[0];

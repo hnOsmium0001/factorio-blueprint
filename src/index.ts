@@ -1,13 +1,12 @@
-'use strict';
-
-import Entity from './entity';
-import Tile from './tile';
 import Victor from 'victor';
 import prettyJSON from 'prettyjson';
-import entityData from './defaultentities';
-import util from './util';
+import { Entity } from './entity';
+import { Tile } from './tile';
+import { DEFAULT_ENTITIES as entityData } from './default_entities';
+import { util } from './util';
 
 type Version = '0' | 'latest';
+
 interface Position {
   x: number;
   y: number;
@@ -22,7 +21,7 @@ interface BlueprintOptions extends BlueprintLoadOptions {
   checkWithEntityData?: boolean; // Should we validate enitity names with entityData? Default true
 }
 
-export default class Blueprint {
+export class Blueprint {
   name: string;
   icons: string[];
   entities: Entity[];
